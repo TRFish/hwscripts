@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Основной цикл интерактивной оболочки
 command="help"
 while true; do
     if [ $command = "help" ] || [ $command = "0" ]
@@ -31,10 +30,8 @@ while true; do
         echo -n "Введите права для нового файла (оставьте пустым для прав по-умолчанию): "
         read frule
         touch $fname
-        if [ -z $frule ]
+        if [ $frule ]
         then
-            echo -n # Испоьзуется вместо pass
-        else
             chmod $frule $fname
         fi
     
