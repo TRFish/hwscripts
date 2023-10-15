@@ -44,7 +44,12 @@ while true; do
         read address
         echo -n "Кол-во пакетов: "
         read packages
-        ping -c $packages $address
+        if [ $address ] && [ $packages ]
+        then
+            ping -c $packages $address
+        else
+            echo "Строка не может быть пустой!"
+        fi
     fi
 
     echo -n "Command (help): "
