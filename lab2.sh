@@ -15,9 +15,9 @@ while true; do
     elif [ $command = "info" ] || [ $command = "1" ]
     then
         source /usr/lib/os-release
-        echo "username: $USER"
-        #echo "hostname: $HOSTNAME"
-        echo "release: $PRETTY_NAME ($BUILD_ID)"
+        echo "Имя пользователя: $USER"
+        #echo "Имя компьютера: $HOSTNAME"
+        echo "ОС и номер сборки: $PRETTY_NAME ($BUILD_ID)"
 
     elif [ $command = "xomyak" ] || [ $command = "2" ]
     then
